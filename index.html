@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="screeningTest.css">
+    <title>BOGO Offer</title>
+</head>
+
+<body>
+    <div class="cloudy-day">
+
+        <div class="group-60">
+            <h1 class="bogo-text">YAY! It’s BOGO</h1>
+        </div>
+        <div class="group-rectangle group-rectangle-1">
+            <div class="rectangle-50"></div>
+            <div class="rectangle-49"></div>
+
+            <div class="small-group-box">
+                <div class="discount-text">
+                    <span>30%</span><br>
+                    <span class="off-text">Off</span>
+                </div>
+            </div>
+
+            <div class="vector-1"></div>
+
+            <div class="group-2571">
+                <div class="ellipse-286">
+                    <div class="ellipse-285"></div>
+                </div>
+            </div>
+
+            <div class="frame-60766">
+                <div>Buy 1 Get 2</div>
+                <div>$18.00 USD</div>
+            </div>
+        </div>
+        <div class="group-rectangle group-rectangle-2">
+            <div class="rectangle-46"></div>
+            <div class="rectangle-47"></div>
+            <div class="frame-60765">
+                <div class="buy-2-get-4">Buy 2 Get 4</div>
+                <div class="price">$24.00 USD</div>
+            </div>
+
+            <div class="group-2535">
+                <div class="ellipse-288">
+                    <div class="ellipse-287"></div>
+                </div>
+            </div>
+
+            <div class="vector-2"></div>
+
+            <div class="group-2570">
+                <div class="discount-text" style="right: 47px;">
+                    <span>30%</span><br>
+                    <span class="off-text">Off</span>
+                </div>
+            </div>
+
+            <div class="most-popular">Most Popular</div>
+        </div>
+        <div class="group-rectangle group-rectangle-3">
+            <div class="rectangle-1426"></div>
+            <div class="rectangle-1427"></div>
+            <div class="rectangle-1428"></div>
+            <div class="rectangle-1429"></div>
+            <p class="buy-3-get-6">Buy 3 Get 6</p>
+            <p class="usd-36">$36.00 USD</p>
+            <p class="size">Size</p>
+            <p class="s">S</p>
+            <p class="black">Black</p>
+            <p class="colour">Colour</p>
+            <p class="s-2">S</p>
+            <p class="price-10">$10.00 USD</p>
+            <div class="polygon-31" onclick="toggleOptions()"></div>
+            <div class="polygon-32"></div>
+            <div class="polygon-33"></div>
+            <div class="polygon-34"></div>
+            <div class="line-353"></div>
+            <p class="colour-2">Colour</p>
+            <div class="frame-628528">
+                <p class="discount">10% Off</p>
+            </div>
+            <div class="ellipse-290"></div>
+            <div class="ellipse-289"></div>
+            <p class="text-1">#1</p>
+            <p class="text-2">#2</p>
+
+        </div>
+        <p class="free-delivery">Free Delivery</p>
+        <p class="total-price">Total : $18.00 USD</p>
+        <div class="add-to-cart">
+            <div class="icon-container">
+                <div class="plus-icon"></div>
+            </div>
+            <span class="add-to-cart-text">Add to Cart</span>
+        </div>
+        <div class="powered-by">
+            <span class="powered-by-text">Powered by</span>
+            <span class="pumper-text">Pumper</span>
+        </div>
+
+    </div>
+    <script>
+        const rectangles = document.querySelectorAll('.group-rectangle');
+
+        rectangles.forEach(rectangle => {
+            rectangle.addEventListener('click', (event) => {
+                event.stopPropagation(); // Prevent the click event from propagating to the document
+
+                // Remove active class from all rectangles
+                rectangles.forEach(rect => rect.classList.remove('active'));
+
+                // Add active class to the clicked rectangle
+                rectangle.classList.add('active');
+            });
+        });
+
+        document.addEventListener('click', () => {
+            // Remove active class from all rectangles when clicking outside
+            rectangles.forEach(rect => rect.classList.remove('active'));
+        });
+
+
+    </script>
+</body>
+
+</html>
